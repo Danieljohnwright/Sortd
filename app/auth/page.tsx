@@ -37,7 +37,7 @@ export default function AuthPage() {
     <main className="min-h-screen flex items-center justify-center px-4 bg-gray-50">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-orange-500">fixr</h1>
+          <h1 className="text-3xl font-bold text-orange-500">Sortd</h1>
           <p className="text-gray-500 text-sm mt-1">
             {isSignUp ? "Create your account" : "Welcome back"}
           </p>

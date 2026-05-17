@@ -32,15 +32,15 @@ export default async function HomePage() {
       {/* Header */}
       <div className="flex items-center justify-between py-5">
         <div>
-          <h1 className="text-2xl font-bold text-orange-500">Sortd.</h1>
+          <h1 className="text-2xl font-bold text-orange-500">sortd..</h1>
           <p className="text-sm text-gray-500">Johannesburg, GP</p>
         </div>
         <div className="flex gap-2">
           <Link
-            href="/auth"
+            href="/dashboard"
             className="text-sm px-4 py-2 border border-gray-200 rounded-full hover:bg-gray-50"
           >
-            Sign in
+            Dashboard
           </Link>
           <Link
             href="/register"

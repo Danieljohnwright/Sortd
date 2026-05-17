@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import BottomNav from "@/components/BottomNav";
 
 export const metadata: Metadata = {
-  title: "sortd. — Find local service providers",
-  description: "Book trusted service providers near you",
+  title: "Sortd — Find local service providers",
+  description: "Book trusted local pros for any service, near you",
 };
 
 export default function RootLayout({
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gray-50 min-h-screen font-sans antialiased">
         {children}
+        <BottomNav />
       </body>
     </html>
   );

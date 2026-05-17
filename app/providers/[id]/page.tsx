@@ -6,8 +6,9 @@ import BookingForm from "@/components/BookingForm";
 export default async function ProviderPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const supabase = await createClient();
 
   const { data: provider } = await supabase
@@ -20,7 +21,7 @@ export default async function ProviderPage({
       reviews(rating, comment, created_at, profiles(full_name))
     `,
     )
-    .eq("id", params.id)
+    .eq("id", id)
     .single();
 
   if (!provider) notFound();

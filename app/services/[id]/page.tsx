@@ -5,14 +5,15 @@ import { notFound } from "next/navigation";
 export default async function ServicePage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const supabase = await createClient();
 
   const { data: service } = await supabase
     .from("services")
     .select("*")
-    .eq("id", params.id)
+    .eq("id", id)
     .single();
 
   if (!service) notFound();
@@ -27,7 +28,7 @@ export default async function ServicePage({
       reviews(rating)
     `,
     )
-    .eq("provider_services.service_id", params.id)
+    .eq("provider_services.service_id", id)
     .eq("is_available", true);
 
   function getAvgRating(reviews: any[]) {

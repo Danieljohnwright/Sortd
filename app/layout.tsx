@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sotrd. — Find local service providers",
-  description:
-    "Book trusted service providers near you",
+  title: "sortd. — Find local service providers",
+  description: "Book trusted service providers near you",
 };
 
 export default function RootLayout({
